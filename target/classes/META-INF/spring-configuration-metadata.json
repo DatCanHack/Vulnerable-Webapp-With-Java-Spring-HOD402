@@ -1,0 +1,42 @@
+{
+  "groups": [
+    {
+      "name": "test",
+      "type": "com.example.webapp.config.TestProperties",
+      "sourceType": "com.example.webapp.config.TestProperties"
+    },
+    {
+      "name": "test.admin",
+      "type": "com.example.webapp.config.TestProperties$Admin",
+      "sourceType": "com.example.webapp.config.TestProperties"
+    },
+    {
+      "name": "test.user",
+      "type": "com.example.webapp.config.TestProperties$User",
+      "sourceType": "com.example.webapp.config.TestProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "test.admin.password",
+      "type": "java.lang.String",
+      "sourceType": "com.example.webapp.config.TestProperties$Admin"
+    },
+    {
+      "name": "test.admin.username",
+      "type": "java.lang.String",
+      "sourceType": "com.example.webapp.config.TestProperties$Admin"
+    },
+    {
+      "name": "test.user.password",
+      "type": "java.lang.String",
+      "sourceType": "com.example.webapp.config.TestProperties$User"
+    },
+    {
+      "name": "test.user.username",
+      "type": "java.lang.String",
+      "sourceType": "com.example.webapp.config.TestProperties$User"
+    }
+  ],
+  "hints": []
+}
