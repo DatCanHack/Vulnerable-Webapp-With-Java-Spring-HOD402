@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tải Báo Cáo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+
+    <div class="card">
+        <div class="card-header">
+            <h2>Trang Tải Báo Cáo Doanh Thu</h2>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Các báo cáo có sẵn:</h5>
+            <p class="card-text">Bấm vào các liên kết bên dưới để tải về file báo cáo tương ứng.</p>
+            
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a th:href="@{/reports/download(file='report-2025-06-15.dat')}">Báo cáo ngày 15/06/2025</a>
+                </li>
+                <li class="list-group-item">
+                    <a th:href="@{/reports/download(file='report-2025-05-31.dat')}">Báo cáo tháng 05/2025</a>
+                </li>
+            </ul>
+
+            <hr class="my-4">
+
+            <h5 class="card-title text-danger">Mô Phỏng Tấn Công</h5>
+            <p class="card-text">
+                Đường link bên dưới được tạo ra để khai thác lỗ hổng Path Traversal. Nó sẽ cố gắng
+                đọc file <code>pwned.ser</code> từ thư mục <code>/tmp/</code> thay vì đọc file báo cáo.
+            </p>
+            <div class="alert alert-danger">
+                <a th:href="@{/reports/download(file='../pwned.ser')}" class="alert-link">
+                    Bấm vào đây để mô phỏng tấn công (Kích hoạt payload tại /tmp/pwned.ser)
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

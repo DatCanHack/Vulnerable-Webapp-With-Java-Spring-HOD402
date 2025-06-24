@@ -3,12 +3,14 @@ com/example/webapp/repository/UserRepository.class
 com/example/webapp/service/UserService.class
 com/example/webapp/config/TestProperties$User.class
 com/example/webapp/model/Role.class
-com/example/webapp/model/User.class
+com/example/webapp/controller/SellerRevenueController.class
 com/example/webapp/controller/HomeController.class
+com/example/webapp/model/User.class
 com/example/webapp/WebApplication.class
 com/example/webapp/service/CustomUserDetailsService.class
 com/example/webapp/config/TestProperties$Admin.class
 com/example/webapp/controller/ProductController.class
+com/example/webapp/service/RevenueService.class
 com/example/webapp/config/DevPasswordEncoder.class
 com/example/webapp/model/Product.class
 META-INF/spring-configuration-metadata.json

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lỗi hệ thống</title>
+</head>
+<body>
+    <h2 style="color:red;">❌ Đã xảy ra lỗi</h2>
+
+    <!-- ✅ Thông báo lỗi hiển thị -->
+    <p th:if="${error}" th:text="${error}" style="color:red;"></p>
+
+    <!-- ✅ Thông báo thành công -->
+    <p th:if="${message}" th:text="${message}" style="color:green;"></p>
+
+    <!-- ✅ Hiển thị nội dung XML nếu có -->
+    <div th:if="${month}">
+        <p><strong>Tháng:</strong> <span th:text="${month}"></span></p>
+        <p><strong>Dữ liệu:</strong> <span th:text="${data}"></span></p>
+    </div>
+</body>
+</html>

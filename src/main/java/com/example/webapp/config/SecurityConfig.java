@@ -34,12 +34,16 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
+   
+
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/css/**", "/js/**", "/images/**").permitAll()
                 .requestMatchers("/","/error" ,"/home", "/products", "/login", "/register", "/h2-console/**").permitAll()
                 .requestMatchers("/products/manage/**", "/products/add/**", "/products/edit/**", "/products/delete/**").hasAnyRole("SELLER", "ADMIN")
                 .requestMatchers("/users/**").hasRole("ADMIN")
+                .requestMatchers("/seller/revenue/**").hasRole("SELLER")
+                .requestMatchers("/uploads/**").hasRole("SELLER")
                 .anyRequest().authenticated()
             )
             .userDetailsService(userDetailsService)

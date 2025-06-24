@@ -8,12 +8,14 @@
     {
       "name": "test.admin",
       "type": "com.example.webapp.config.TestProperties$Admin",
-      "sourceType": "com.example.webapp.config.TestProperties"
+      "sourceType": "com.example.webapp.config.TestProperties",
+      "sourceMethod": "public com.example.webapp.config.TestProperties.Admin getAdmin() "
     },
     {
       "name": "test.user",
       "type": "com.example.webapp.config.TestProperties$User",
-      "sourceType": "com.example.webapp.config.TestProperties"
+      "sourceType": "com.example.webapp.config.TestProperties",
+      "sourceMethod": "public com.example.webapp.config.TestProperties.User getUser() "
     }
   ],
   "properties": [
